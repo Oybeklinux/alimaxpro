@@ -722,7 +722,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     {
         $apiToken = "1986479346:AAFnKPGhRq3hS7L3q0NN6WZEjAj7IcFAELw";
         $data = [
-            'chat_id' => '@alimaxpro_comments_bot', 
+            'chat_id' => '-1001514770230', 
             'text' =>  "Ismi: " . $_POST['first_name'] . "\n" . 
             "Familiyasi: " . $_POST['surname'] . "\n" . 
             "Email: " . $_POST['email'] . "\n" . $_POST['text']

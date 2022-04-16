@@ -600,18 +600,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form action="#" method="post">
 					<div class="fields-grid">
 						<div class="styled-input">
-							<input type="text" name="first_name" placeholder="Ism" required="">
+							<input type="text" name="fullname" placeholder="To'liq ismingiz" required="">
 						</div>
 						<div class="styled-input">
-							<input type="text" name="surname" placeholder="Familya" required="">
+							<input type="tel" name="phone" placeholder="Telefon raqamingiz" required="">
 						</div>
 						<div class="styled-input">
-							<input type="email" name="email" placeholder="e-mail" required="">
+							<input type="email" name="email" placeholder="Elektron manzilingiz" >
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="styled-input textarea-grid">
-						<textarea name="message" placeholder="text" required=""></textarea>
+						<textarea name="message" placeholder="Habarni kiriting" required=""></textarea>
 					</div>
 					<input type="submit" value="Jo'natmoq" name="submit">
 				</form>
@@ -723,9 +723,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $apiToken = "1986479346:AAFnKPGhRq3hS7L3q0NN6WZEjAj7IcFAELw";
         $data = [
             'chat_id' => '-1001514770230', 
-            'text' =>  "Ismi: " . $_POST['first_name'] . "\n" . 
-            "Familiyasi: " . $_POST['surname'] . "\n" . 
-            "Email: " . $_POST['email'] . "\n" . $_POST['message']
+            'text' =>  "To'liq ismi: " . $_POST['fullname'] . "\n" . 
+            "📱 Telefon raqam: " . $_POST['phone'] . "\n" . 
+            "📪 Email: " . $_POST['email'] . "\n" . 
+			"✉️ Habar: " . $_POST['message']
         ];
         $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );    
     }

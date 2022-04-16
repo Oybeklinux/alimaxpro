@@ -611,7 +611,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"> </div>
 					</div>
 					<div class="styled-input textarea-grid">
-						<textarea name="Message" placeholder="text" required=""></textarea>
+						<textarea name="message" placeholder="text" required=""></textarea>
 					</div>
 					<input type="submit" value="Jo'natmoq" name="submit">
 				</form>
@@ -725,7 +725,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             'chat_id' => '-1001514770230', 
             'text' =>  "Ismi: " . $_POST['first_name'] . "\n" . 
             "Familiyasi: " . $_POST['surname'] . "\n" . 
-            "Email: " . $_POST['email'] . "\n" . $_POST['text']
+            "Email: " . $_POST['email'] . "\n" . $_POST['message']
         ];
         $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );    
     }

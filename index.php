@@ -603,7 +603,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type="text" name="fullname" placeholder="To'liq ismingiz" required="">
 						</div>
 						<div class="styled-input">
-							<input type="tel" name="phone" placeholder="Telefon raqamingiz" required="">
+							<input type="text" name="phone" placeholder="Telefon raqamingiz" required="">
 						</div>
 						<div class="styled-input">
 							<input type="email" name="email" placeholder="Elektron manzilingiz" >

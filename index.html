@@ -615,6 +615,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="styled-input textarea-grid">
 						<textarea name="message" placeholder="Habarni kiriting" required=""></textarea>
 					</div>
+					Hujjatlar bo'lsa, ularni avval zip lab oling
+					<input type="file">
 					<input type="submit" value="Jo'natmoq" name="submit">
 				</form>
 			</div>
@@ -722,13 +724,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<?php
     if(isset($_POST['submit']))
     {
-        $apiToken = "1986479346:AAFnKPGhRq3hS7L3q0NN6WZEjAj7IcFAELw";
+		<?php
+
+		$apiToken = "1986479346:AAFnKPGhRq3hS7L3q0NN6WZEjAj7IcFAELw";
+
+		$curl = curl_init();
+
+		$message_api = "https://api.telegram.org/bot$apiToken/sendDocument?chat_id=-1001514770230" 
+
+		curl_setopt_array($curl, array(
+		CURLOPT_URL => $message_api,
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => '',
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 0,
+		CURLOPT_FOLLOWLOCATION => true,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => 'POST',
+		CURLOPT_POSTFIELDS => array('document'=> new CURLFILE($_POST['file'])),
+		));
+
+		$url = curl_exec($curl);
+
+		curl_close($curl);
+		echo $url;
+
+        
         $data = [
             'chat_id' => '-1001514770230', 
             'text' =>  "To'liq ismi: " . $_POST['fullname'] . "\n" . 
             "📱 Telefon raqam: " . $_POST['phone'] . "\n" . 
             "📪 Email: " . $_POST['email'] . "\n" . 
-			"✉️ Habar: " . $_POST['message']
+			"✉️ Habar: " . $_POST['message'] \n .
+			"Fayl: " . $url
         ];
         $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );    
     }

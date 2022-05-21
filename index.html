@@ -288,7 +288,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="inst-grids">
 				<div class="col-md-4 col-sm-4 col-xs-12 blog-gd-w3ls img-fluid">
 					<a href="#" data-toggle="modal" data-target="#myModal5">
-						<img src="images/IMG_20210804_212826_253.jpg" alt="blog-image">
+						<img src="images/rahbar.webp" alt="blog-image">
 						<div class="date-w3">
 							<h4>Rahbar</h4> <br>
 							<p class="para-w3-agile"> Tel:+998 90 315 64 80
@@ -416,7 +416,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 			<a href="#" data-toggle="modal" data-target="#myModal7">
-				<img src="images/Новый проект (14).png" alt="blog-image">
+				<img src="images/Mirzobek.webp" alt="blog-image">
 				<div class="date-w3">
 					<h4>Advokat</h4> <br>
 					<p class="para-w3-agile">
@@ -490,24 +490,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="area-main">
 				<div class="col-md-6 area-inner">
+					<div class="area-img3">
+					</div>
 					<div class="area-right p3">
 						<h5>Iqtisodiy</h5>
 						<p class="para-w3-agile">Iqtisodiy masalalarda firma tomonidan yuridik shaxslarning shartnomaviy
 							va boshqa majburiyatlardan kelib chiqqan nizolariga samarali yechim beriladi</p>
 					</div>
-					<div class="area-img3">
-					</div>
+					
 				</div>
 				<div class="col-md-6 area-inner">
+					<div class="area-img4">
+					</div>
+
 					<div class="area-right p4">
 						<h5>Fuqarolik va mehnat munosabatlari</h5>
 						<p class="para-w3-agile">Fuqarolik masalalarida fuqarolar o'rtasida kelib chiqqan nizolarda,
 							masalan qarz munosabatlari, vorislik masalalari, omonat masalalarida va boshqa holatlarda
 							fuqarolarga yuridik yordam ko‘rsatiladi</p>
 					</div>
-					<div class="area-img4">
-					</div>
-
+					
 				</div>
 			</div>
 			<div class="area-main">
@@ -606,7 +608,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type="text" name="phone" placeholder="Telefon raqamingiz" required="">
 						</div>
 						<div class="styled-input">
-							<input type="email" name="email" placeholder="Elektron manzilingiz" >
+							<input type="email" name="email" placeholder="Elektron manzilingiz">
 						</div>
 						<div class="clearfix"> </div>
 					</div>
@@ -717,7 +719,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--js for bootstrap working-->
 		<script src="js/bootstrap.js"></script>
 		<!-- //for bootstrap working -->
-<?php
+		<?php
     if(isset($_POST['submit']))
     {
         $apiToken = "1986479346:AAFnKPGhRq3hS7L3q0NN6WZEjAj7IcFAELw";
@@ -731,6 +733,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );    
     }
 ?>
-    </body>
+</body>
 
 </html>
